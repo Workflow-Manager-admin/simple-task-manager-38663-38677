@@ -1,0 +1,252 @@
+:root {
+  /* Colors */
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #d6d7ef;
+  --color-brand-accent: #9395d3;
+  --color-dark: #000000;
+  --color-label: #8b8787;
+  --color-border: #d1d1d6;
+  --color-light-grey: #ebebf5;
+  --color-green: #34c759;
+  --color-yellow: #ffd60a;
+  --color-todo-shadow: #000000; /* Used with opacity for shadows */
+  --color-action-bg: #b3b7ee;
+  /* More colors can be added as design_system expands */
+}
+
+/* Typography from design tokens */
+.typo-headline {
+  font-family: 'Jost', Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 34.68px;
+  color: var(--color-bg-primary);
+}
+.typo-todo-title {
+  font-family: 'Jost', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18.78px;
+  color: var(--color-brand-accent);
+}
+.typo-todo-sub {
+  font-family: 'Jost', Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14.45px;
+  color: var(--color-dark);
+}
+.typo-bar-label {
+  font-family: 'Jost', Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14.45px;
+  color: var(--color-brand-accent);
+}
+.typo-complete-label {
+  font-family: 'Jost', Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14.45px;
+  color: var(--color-label);
+}
+.typo-form-label {
+  font-family: 'Jost', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.12px;
+  color: var(--color-label);
+}
+.typo-btn {
+  font-family: 'Jost', Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28.9px;
+  color: var(--color-bg-primary);
+}
+.typo-btn-secondary {
+  font-family: 'Jost', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 21.68px;
+  color: var(--color-bg-primary);
+}
+
+/* Border radius tokens */
+:root {
+  --border-radius-xs: 1px;
+  --border-radius-lg: 15px;
+  --border-radius-xl: 20px;
+}
+
+/* Box shadow token (shadow_0) */
+.shadow-0 {
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.20);
+}
+
+/* Layout helpers and containers */
+.figma-container {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Status bar mockup */
+.status-bar {
+  width: 100%;
+  height: 44px;
+  background-color: var(--color-bg-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* App bar / header */
+.appbar {
+  width: 100%;
+  height: 118px;
+  background-color: var(--color-brand-accent);
+  border-radius: 0 0 var(--border-radius-xl) var(--border-radius-xl);
+  display: flex;
+  align-items: flex-end;
+  padding: 0 24px 20px 24px;
+  box-sizing: border-box;
+  position: relative;
+}
+.appbar-title {
+  flex: 1;
+  text-align: left;
+  padding-left: 8px;
+}
+
+.back-btn {
+  border: none;
+  background: transparent;
+  width: 25px;
+  height: 25px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+.btn-add-todo {
+  width: 70px;
+  height: 70px;
+  background: var(--color-brand-accent);
+  color: var(--color-bg-primary);
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  bottom: 40px;
+  right: 24px;
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.20);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  cursor: pointer;
+  z-index: 10;
+}
+.navbar {
+  width: 100%;
+  height: 68px;
+  background: var(--color-bg-primary);
+  border-top-left-radius: var(--border-radius-xl);
+  border-top-right-radius: var(--border-radius-xl);
+  box-shadow: 0 -2px 4px 0 rgba(0,0,0,0.04);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+}
+
+/* Todo list */
+.todos-list {
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.todo-card {
+  background: var(--color-bg-primary);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.20);
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  gap: 12px;
+  justify-content: space-between;
+}
+.todo-titles {
+  flex: 1 1 auto;
+}
+.todo-toolbar {
+  display: flex;
+  gap: 10px;
+}
+
+/* Forms (Add/Edit) */
+.figma-form-label {
+  display: block;
+  margin-bottom: 4px;
+}
+.figma-input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--color-label);
+  font-size: 16px;
+  padding: 4px 0;
+  background: transparent;
+  margin-bottom: 16px;
+}
+.figma-form-btn-primary,
+.figma-form-btn-secondary {
+  border-radius: var(--border-radius-lg);
+  min-width: 120px;
+  padding: 14px 0;
+  margin: 8px 16px 8px 0;
+  border: none;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.figma-form-btn-primary {
+  background: var(--color-brand-accent);
+  color: var(--color-bg-primary);
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.20);
+}
+.figma-form-btn-secondary {
+  background: #fff;
+  color: var(--color-dark);
+  border: 1px solid var(--color-brand-accent);
+}
+
+/* Responsive */
+@media (max-width: 440px) {
+  .todos-list {
+    width: 98vw;
+  }
+}
+
+/* Utilities */
+.flex {
+  display: flex;
+}
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.space-between { justify-content: space-between; }
+
+/* Icon buttons etc */
+.icon-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0 8px;
+  cursor: pointer;
+}
+
+/* Add further classes as new layer types or component tokens emerge in code adaption. */
